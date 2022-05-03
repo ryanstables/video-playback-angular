@@ -19,7 +19,7 @@ export class VideoComponent implements AfterViewInit {
   ) { }
 
   ngAfterViewInit(): void {
-    this.transport.loadVideo(this.videoElement.nativeElement);
+    this.transport.loadVideo(this.videoElement.nativeElement);    
   }
 
 }
