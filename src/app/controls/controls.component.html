@@ -2,7 +2,7 @@
 
   <button (click)="transport.skip(-1)">
     <img src="../../assets/rewind.svg" alt="Skip backwards 1s">
-    <p>10 seconds</p>
+    <p>1 second</p>
   </button>
 
   <button (click)="togglePlay()" [ngSwitch]="transport.playing$ | async">
@@ -12,7 +12,7 @@
 
   <button (click)="transport.skip(1)">
     <img src="../../assets/forward.svg" alt="Skip forwards 1s">
-    <p>10 seconds</p>
+    <p>1 second</p>
   </button>
 
 </div>
