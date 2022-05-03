@@ -1,0 +1,18 @@
+<div class="controls" id="control-panel">
+
+  <button (click)="transport.skip(-1)">
+    <img src="../../assets/rewind.svg" alt="Skip backwards 1s">
+    <p>1 second</p>
+  </button>
+
+  <button (click)="togglePlay()" [ngSwitch]="transport.playing$ | async">
+    <img *ngSwitchCase="false" src="../../assets/play.svg" alt="Play" id="play">
+    <img *ngSwitchCase="true" src="../../assets/pause.svg" alt="Pause" id="pause">
+  </button>
+
+  <button (click)="transport.skip(1)">
+    <img src="../../assets/forward.svg" alt="Skip forwards 1s">
+    <p>1 second</p>
+  </button>
+
+</div>

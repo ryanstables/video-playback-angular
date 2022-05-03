@@ -1,0 +1,27 @@
+<div 
+  #track
+  class="track"
+>
+  <div class="progress-track">
+    <div 
+      #progress
+      class="progress-bar"
+      [style.width.px]="progressLength$ | async"
+    ></div>
+  </div>  
+
+  <div 
+    *ngFor="let frame of keyFrames$ | async"
+    class="keyframe"
+    [style.left.px]="frame.position"
+    (mousedown)="transport.scrub(frame.timestamp)"
+    (mouseenter)="frame.show = true"
+    (mouseleave)="frame.show = false"
+  >
+    <div class="line"></div>
+    <div class="thumbnail" [class.show]="frame.show">
+      <img [src]="frame.image" class="dogpic">
+    </div>
+  </div>
+  
+</div>

@@ -1,0 +1,15 @@
+<div 
+  (mouseenter)="showControls = true"
+  (mouseleave)="showControls = false"
+  class="video-container"
+>
+  <video 
+    #myVideo
+    class="video"
+  >
+    <source [src]="data.videoUrl" type="video/mp4">
+  </video>
+  <app-controls
+    [class.show]="showControls"
+  ></app-controls>
+</div>
